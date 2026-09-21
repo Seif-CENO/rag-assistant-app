@@ -1,0 +1,23 @@
+# Environments
+.venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+
+# Data & Vector Store (Exclude raw files to keep repo clean)
+data/docs/*
+data/images/*
+data/vector_store/*
+
+# Exceptions (Keep the folder structure intact on GitHub)
+!data/docs/.keep
+!data/images/.keep
+!data/vector_store/.keep
+
+# Notebooks
+.ipynb_checkpoints/
