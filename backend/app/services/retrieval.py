@@ -8,7 +8,7 @@ import ollama
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 vectordb = Chroma(persist_directory="../data/vector_store", embedding_function=embeddings)
 retriever = vectordb.as_retriever(search_kwargs={"k": 3})
-vision_model = YOLO('yolov8n.pt')
+vision_model = YOLO('keremberke/yolov8m-protective-equipment-detection')
 
 def _build_rag_answer(prompt: str, retrieved_docs):
     sources = [f"{doc.metadata.get('source', 'Unknown')} (Page {doc.metadata.get('page', 'N/A')})" for doc in retrieved_docs]
